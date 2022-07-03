@@ -1,0 +1,142 @@
+/*==========================================
+    Pricing plan
+==========================================*/
+.pricing-plan {
+    padding: 120px 0;
+    .single-plan {
+        background: url('../img/price-plan-bg-1.jpg') center center no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 42px 0 43px;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $gradient-1;
+            z-index: -2;
+            opacity: .95;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            left: 5px;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: $white;
+            z-index: -1;
+            @include transition($transition);
+            opacity: 1;
+        }
+        &:hover, &.active {
+            &:before {
+                opacity: 0;
+            }
+            h3 {
+                @include text-gradient-white($text-gradient-white);
+            }
+            .plan-icon {
+                img {
+                    filter: brightness(100);
+                }
+            }
+            .feature-list {
+                ul {
+                    li {
+                        @include text-gradient-white($text-gradient-white);
+                        i {
+                            @include text-gradient-white($text-gradient-white);
+                        }
+                    }
+                }
+            }
+            .price-info {
+                span.parcent, span.price {
+                    @include text-gradient-white($text-gradient-white);
+                }
+            }
+            .price-button {
+                color: $base-color-2;
+                &:after {
+                    opacity: 1;
+                    background: $gradient-white;
+                }
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        h3 {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 800;
+            color: #49596d;
+            margin-bottom: 31px;
+            @include transition($transition);
+        }
+        .plan-icon {
+            height: 75px;
+            margin-bottom: 29px;
+            img {
+                height: 100%;
+            }
+        }
+        .feature-list {
+            display: inline-block;
+            ul {
+                text-align: left;
+                li {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    color: #555;
+                    i {
+                        @include text-gradient($text-gradient-1);
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+        .price-info {
+            margin-bottom: 36px;
+            span {
+                display: block;
+                &.parcent {
+                    font-size: 60px;
+                    font-weight: 400;
+                    @include text-gradient($text-gradient-1);
+                    margin-top: 4px;
+                    margin-bottom: -4px;
+                    font-family: $special;
+                }
+                &.price {
+                    font-size: 16px;
+                    font-weight: 600;
+                    // @include text-gradient($text-gradient-1);
+            color: #49596d;
+                    small {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .price-button {
+            &:after {
+                @include transition($transition);
+            }
+            &:hover {
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

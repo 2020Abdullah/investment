@@ -1,0 +1,29 @@
+.error {
+    padding: 120px 0;
+    background: $white;
+    .part-text {
+        text-align: center;
+        margin-top: 40px;
+        h4 {
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #383838;
+            margin-bottom: 0;
+        }
+        .back-to-home-btn {
+            display: inline-block;
+            padding: 0 30px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+            background: $gradient-1;
+            color: #fff;
+            font-weight: 500;
+            margin-top: 40px;
+            box-shadow: 0px 5px 5px 0px rgba($black, 0.2);
+        }
+    }
+}

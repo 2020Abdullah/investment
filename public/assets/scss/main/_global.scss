@@ -1,0 +1,246 @@
+// custom container
+.container {
+  max-width: 1200px;
+}
+
+// large-button
+.btn-hyipox {
+  display: inline-block;
+  height: 50px;
+  background: $white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+  padding: 0 35px;
+  color: $base-color;
+  border-radius: 50px;
+  margin-top: 40px;
+  font-family: $heading-font;
+  text-transform: capitalize;
+}
+.btn-hyipox-2 {
+  display: inline-block;
+  height:50px;
+  padding: 0 40px;
+  background: $gradient-2;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 50px;
+  color: $white;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  font-family: $heading-font;
+  text-transform: capitalize;
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradient-1;
+    @include transition($transition);
+    z-index: -1;
+    opacity: 0;
+  }
+  &:hover {
+    color: $white;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+// medium button
+.btn-hyipox-medium {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  background: $gradient-2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  color: $white;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  font-family: $heading-font;
+  text-transform: capitalize;
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradient-1;
+    @include transition($transition);
+    z-index: -1;
+    opacity: 0;
+  }
+  &:hover {
+    color: $white;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+// small button
+.btn-hyipox-small {
+  display: inline-block;
+  height: 30px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+  padding: 0 25px;
+  color: $base-color;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+// section title
+.section-title {
+    margin-bottom: 65px;
+    text-align: center;
+    &.section-title-2 {
+      span.sub-title {
+        color: $white;
+      }
+      h2 {
+        color: $white;
+      }
+    }
+    span.sub-title {
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 900;
+      margin-top: -6px;
+      font-family: $heading-font;
+      @include text-gradient($text-gradient-1);
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 60px;
+      color: #49596d;
+      text-transform: capitalize;
+        span {
+          &.special {
+              font-weight: 700;
+              font-family: $special;
+              font-style: italic;
+              @include text-gradient($text-gradient-1);
+          }
+      }
+    }
+}
+.c-white {
+    color: $white;
+}
+
+span {
+  &.special {
+    padding-right: 4px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .row.reorder-xs {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    direction: rtl; }
+  .row.reorder-xs > [class*="col-"] {
+    -ms-transform: rotate(-180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-180deg);
+    direction: ltr; } }
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.row.homepage-re-xs {
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+  direction: rtl; }
+.row.homepage-re-xs > [class*="col-"] {
+  -ms-transform: rotate(-180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-180deg);
+  direction: ltr; } }
+
+
+/*==========================================
+    Preloader
+==========================================*/
+.preloader {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// back to top button
+.back-to-top-btn {
+  a {
+    background: $gradient-1;
+    border: none;
+    display: inline-block;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
+    bottom: 100%;
+    right: 30px;
+    @include transition($transition);
+    border: 1px solid $white;
+    &.active {
+      bottom: 14px;
+    }
+    &:hover {
+      &:after {
+        opacity: 0;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $gradient-2;
+      z-index: -1;
+      @include transition($transition);
+    }
+  }
+}

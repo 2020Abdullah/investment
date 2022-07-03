@@ -1,0 +1,169 @@
+.register {
+    background: $white;
+    padding: 120px 0 120px;
+    .reg-body {
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px rgba($black, 0.1);
+        padding: 50px;
+        padding-bottom: 28px;
+        background: $gradient-1;
+        form {
+            .sub-title {
+                font-size: 24px;
+                color: $white;
+                line-height: 34px;
+                position: relative;
+                padding-left: 25px;
+                margin-bottom: 24px;
+                margin-top: -6px;
+                text-transform: capitalize;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 14px;
+                    height: 14px;
+                    background: $white;
+                    border-radius: 50%;
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 10px;
+                    background: $gradient-1;
+                    border-radius: 50%;
+                }
+            }
+            input[type=text], [type=email], [type=password] {
+                height: 60px;
+                width: 100%;
+                border: 1px solid rgba($white, 0.5);
+                border-radius: 5px;
+                background: transparent;
+                padding: 0 30px;
+                color: $white;
+                font-size: 15px;
+                margin-bottom: 10px;
+                transition: all 0.3s ease-in;
+                &::placeholder {
+                    color: #ffffffcc;
+                }
+            }
+            .term-condition {
+                margin-top: 30px;
+                .title {
+                    font-size: 24px;
+                    color: $white;
+                    line-height: 34px;
+                    position: relative;
+                    padding-left: 25px;
+                    margin-bottom: 24px;
+                    margin-top: -6px;
+                    text-transform: capitalize;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 14px;
+                        height: 14px;
+                        background: $white;
+                        border-radius: 50%;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        left: 2px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 10px;
+                        height: 10px;
+                        background: $gradient-1;
+                        border-radius: 50%;
+                    }
+                }
+                p {
+                    background: transparent;
+                    border: 1px solid rgba($white, 0.5);
+                    border-radius: 5px;
+                    color: $white;
+                    line-height: 28px;
+                    padding: 30px;
+                    margin-bottom: 40px;
+                }
+            }
+            .form-check {
+                p {
+                    color: $white;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+            .form-check [type=checkbox] {
+                opacity: 0;
+            }
+            .form-check [type=checkbox]:not(:checked) {
+                position: absolute;
+                left: -9999px;
+            }
+            .form-check [type=checkbox]:checked + label:before, .form-check [type=checkbox]:not(:checked) + label:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 18px;
+                height: 18px;
+                border: 2px solid $base-color;
+                border-radius: 100%;
+                background: #fff;
+                margin-left: -6px;
+            }
+            .form-check [type=checkbox]:not(:checked) + label:after {
+                opacity: 0;
+                transform: scale(0);
+            }
+            .form-check [type=checkbox]:checked + label:after, .form-check [type=checkbox]:not(:checked) + label:after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background: $gradient-1;
+                position: absolute;
+                top: 6px;
+                left: 4px;
+                border-radius: 100%;
+                transition: all 0.2s ease;
+                margin-left: -6px;
+            }
+            .form-check label {
+                color: $white;
+                font-weight: 400;
+                display: block;
+                user-select: none;
+                cursor: pointer;
+                margin-bottom: 8px;
+            }
+            .btn-form {
+                letter-spacing: 0.5px;
+                float: right;
+                background: $white;
+                background: $gradient-2;
+                margin-right: 0;
+                padding: 0 40px;
+                height: 50px;
+                line-height: 46px;
+                border: 2px solid $white;
+                color: $white;
+                border-radius: 50px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}

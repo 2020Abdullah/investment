@@ -1,0 +1,114 @@
+// team
+.team {
+    padding: 120px 0;
+    background: url('../img/team-bg.png') center center no-repeat;
+    background-size: cover;
+    .single-member {
+        text-align: center;
+        .img-box {
+            overflow: hidden;
+            padding: 10px 0 10px;
+            margin-bottom: 23px;
+        }
+        .part-img {
+            position: relative;
+            width: 300px;
+            display: inline-block;
+            .view-btn {
+                display: inline-block;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                left: 50%;
+                top: -10%;
+                margin-left: -25px;
+                margin-top: -25px;
+                color: $white;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 18px;
+                z-index: 2;
+                border-bottom: 1px dashed $white;
+                @include transition($transition);
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover {
+                .view-btn {
+                    top: 50%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                img {
+                    &.border {
+                        opacity: 0;
+                    }
+                }
+                &:after {
+                    top: 0;
+                }
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: calc(100% + 10px);
+                width: 100%;
+                height: 100%;
+                background: $gradient-1;
+                @include transition($transition);
+                opacity: .8;
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                left: -6px;
+                top: -6px;
+                right: -6px;
+                bottom: -6px;
+                opacity: .5;
+                background: $gradient-1;
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            }
+            img {
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            }
+        }
+        .part-text {
+            text-align: center;
+            span {
+                display: block;
+                &.name {
+                    font-size: 24px;
+                    font-weight: 670;
+                    top: calc( 100% -10px);
+                    margin-bottom: 5px;
+                    font-family: $heading-font;
+                }
+                &.invested-amount {
+                    color: rgba(73, 89, 109, 0.8);
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 22px;
+                }
+            }
+            .paid-from {
+                background: $gradient-2;
+                color: $white;
+                padding: 5px 30px;
+                display: inline-flex;
+                border-radius: 6px;
+                font-family: $heading-font;
+                .paymethod-logo {
+                    width: auto;
+                    margin-left: 15px;
+                    img {
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

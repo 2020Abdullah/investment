@@ -1,0 +1,120 @@
+.breadcrumb-oitila {
+    background: url(../img/breadcrumb-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding-top: 144px;
+    &.db-breadcrumb {
+        .part-txt {
+            padding: 50px 0;
+            @media (max-width: 479px) {
+                padding: 30px 0!important;
+            }
+            h1 {
+                font-size: 34px;
+                line-height: 44px;
+                @media (max-width:768px) {
+                    font-size: 34px!important;
+                    line-height: 44px;
+                }
+                @media (max-width: 479px) {
+                    font-size: 30px!important;
+                    line-height: 40px;
+                }
+            }
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+        .db-user-profile {
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            @media (min-width: 320px) and (max-width: 991px)  {
+                display: none;
+            }
+            .part-data {
+                span {
+                    &.name {
+                        display: block;
+                        font-size: 24px;
+                        line-height: 34px;
+                        color: $white;
+                        font-weight: 600;
+                        margin-bottom: 7px;
+                    }
+                }
+                ul {
+                    li {
+                        display: inline-block;
+                        margin-right: 10px;
+                        color: $white;
+                        span {
+                            &.number {
+                                font-weight: 500;
+                                &:before {
+                                    content: ':';
+                                    margin-right: 6px;
+                                    margin-left: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .part-img {
+                width: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                background: $white;
+                padding: 4px;
+                margin-right: 30px;
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .part-txt {
+        padding: 120px 0;
+        h1 {
+            font-size: 50px;
+            line-height: 60px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: $white;
+            margin-top: -9px;
+            margin-bottom: 15px;
+        }
+        ul {
+            display: flex;
+            li {
+                font-size: 18px;
+                line-height: 100%;
+                text-transform: capitalize;
+                color: $white;
+                padding-right: 30px;
+                margin-bottom: 2px;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 15px;
+                    width: 2px;
+                    height: 100%;
+                    background: $white;
+                }
+                &:last-child {
+                    padding-right: 0;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

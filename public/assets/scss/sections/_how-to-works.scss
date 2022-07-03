@@ -1,0 +1,50 @@
+// how to works
+.how-to-works {
+    padding: 60px 0 35px;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 2;
+    position: relative;
+    z-index: 2;
+    &:after {
+        position: absolute;
+        content: '';
+        left: -60px;
+        right: -60px;
+        top: 0;
+        bottom: 0;
+        background: $white;
+        z-index: -1;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 7px rgb(0 0 0 / 12%);
+    }
+    .single-system {
+        position: relative;
+        padding: 0 15px;
+        .part-icon {
+            left: 0;
+            position: relative;
+            width: 70px;
+            float: left;
+            margin-right: 30px;
+            z-index: 2;
+            img {
+                background: $white;
+            }
+        }
+        .part-text {
+            display: flow-root;
+            h4.title {
+                font-size: 22px;
+                line-height: 32px;
+                font-weight: 600;
+                color: #49596d;
+                // @include text-gradient($text-gradient-1);
+            }
+            p {
+                color: $p-color;
+                line-height: 28px;
+            }
+        }
+    }
+}

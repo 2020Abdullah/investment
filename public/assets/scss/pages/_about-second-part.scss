@@ -1,0 +1,35 @@
+/*==========================================
+    re second part
+==========================================*/
+.re-second-part {
+	padding-top: 120px;
+	.part-text-2 {
+		h2 {
+			color: #283659;
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 48px;
+			margin-top: -7px;
+			margin-bottom: 30px;
+		}
+		p {
+			color: #666666;
+			line-height: 30px;
+		}
+	}
+	.part-feature-2 {
+		padding: 44px 50px 35px;
+		background: #f7fafd;
+		ul {
+			li {
+				padding-bottom: 12px;
+				color: #283659;
+				font-size: 16px;
+				span {
+					color: $base-color;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}

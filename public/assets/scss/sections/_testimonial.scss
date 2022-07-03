@@ -1,0 +1,155 @@
+.testimonial {
+    padding: 120px 0 120px;
+    background: url(../img/team-bg.png) center center no-repeat;
+    background-size: cover;
+    .all-testimonials {
+        background: url('../img/testimonial-bg.jpg') center center no-repeat;
+        background-size: cover;
+        padding: 50px 0;
+        box-shadow: 0 0 21px -7px rgb(0 0 0 / 31%);
+        border-radius: 10px;
+        &:hover {
+            .testi-text-slider {
+                .slick-arrow {
+                    opacity: 1;
+                    &.slick-next {
+                        right: -110px;
+                    }
+                    &.slick-prev {
+                        left: -110px;
+                    }
+                }
+            }
+        }
+        .testi-text-slider {
+            .slick-arrow {
+                width: 50px;
+                height: 50px;
+                background: $gradient-1;
+                border-radius: 50%;
+                line-height: 50px;
+                @include transition($transition);
+                opacity: 0;
+                &:before {
+                   opacity: 1;
+                   font-size: 20px;
+                   line-height: 48px;
+                   color: $base-color;
+                   @include transition($transition);
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 1px;
+                    top: 1px;
+                    right: 1px;
+                    bottom: 1px;
+                    background: $white;
+                    border-radius: 50%;
+                    z-index: -1;
+                    @include transition($transition);
+                }
+                &:hover {
+                    &:after {
+                        opacity: 0;
+                    }
+                    &:before {
+                        color: $white;
+                    }
+                }
+                &.slick-next {
+                    right: -140px;
+                }
+                &.slick-prev {
+                    left: -140px;
+                }
+                
+            }
+            .single-testimonial {
+                outline: none;
+                text-align: center;
+                .quot-icon {
+                    display: inline-block;
+                    margin-bottom: 22px;
+                    width: 40px;
+                }
+                p {
+                    font-size: 22px;
+                    line-height: 36px;
+                    color: #3f3c57;
+                    font-weight: 400;
+                }
+                .part-user {
+                    display: inline-flex;
+                    flex-direction: column;
+                    text-align: end;
+                    margin-bottom: 26px;
+                }
+                .user-name, .user-location {
+                    font-family: $heading-font;
+                }
+                .user-name {
+                    color: #49596d;
+                    font-size: 30px;
+                    font-weight: 300;
+                    display: inline-block;
+                    position: relative;
+                    margin-bottom: -4px;
+                    right: -10px;
+                    font-family: $special;
+                    &:after {
+                        content: '';
+                        right: calc(100% + 20px);
+                        top: 50%;
+                        width: 100px;
+                        height: 1px;
+                        background: $gradient-1;
+                        position: absolute;
+                        opacity: 0.5;
+                    }
+                }
+                .user-location {
+                    color: #999;
+                }
+            }
+        }
+        .testi-user-slider {
+            text-align: center;
+            margin-bottom: -12px;
+            .slick-list {
+                width: 250px;
+                transform: none;
+                display: inline-block;
+            }
+            .single-user {
+                outline: none;
+                // margin: 0 6px;
+                position: relative;
+                z-index: 2;
+                transform: scale(0.7);
+                @include transition($transition);
+                &.slick-current {
+                    transform: scale(0.9);
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: -2px;
+                    right: -2px;
+                    bottom: -2px;
+                    top: -2px;
+                    background: $gradient-1;
+                    z-index: -1;
+                    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                    margin: 2px 0;
+                }
+                img {
+                    width: 100%;
+                    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                    margin: 4px 0;
+                    padding: 0 2px;
+                }
+            }
+        }
+    }
+}

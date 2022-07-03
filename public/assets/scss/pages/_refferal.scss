@@ -1,0 +1,145 @@
+// refferal
+.refferal-commision {
+    padding: 120px 0;
+    background: url('../img/feature-bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: -1;
+        opacity: .35;
+    }
+    .single-commision {
+        text-align: center;
+        .part-icon {
+            height: 80px;
+            display: inline-block;
+            margin-bottom: 25px;
+            img {
+                width: auto;
+                max-width: none;
+                height: 100%;
+            }
+        }
+        .part-text {
+            span.title {
+                font-size: 22px;
+                line-height: 32px;
+                font-weight: 600;
+                color: #49596d;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .refferal-commision {
+        padding: 60px 0 30px;
+    }
+    .refferal-commision .single-commision {
+        margin-bottom: 30px;
+    }
+    .refferal-commision .single-commision .part-icon {
+        height: 60px;
+    }
+    .refferal-commision .single-commision .part-text span.title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .affiliate .part-para .section-title h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .affiliate .part-para {
+        padding-right: 0;
+    }
+    .affiliate .part-affilate-feature .single-feature .part-text h3.title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .part-affilate-feature {
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+    // how to affiliate
+    .affiliate .affiliate-how-to-do .single-affiliate {
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .affiliate .affiliate-how-to-do {
+        padding-bottom: 10px;
+        padding-top: 50px;
+    }
+    .affiliate .affiliate-how-to-do h2.title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .affiliate .affiliate-how-to-do .single-affiliate .part-text p {
+        font-size: 16px;
+    }
+    .affiliate {
+        padding: 60px 0;
+    }
+    .affiliate .part-para h2.title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    // how to affiliate
+    .affiliate .affiliate-how-to-do .single-affiliate {
+        margin-right: 0;
+        margin: 0 20px;
+        margin-bottom: 20px;
+    }
+    .affiliate .affiliate-how-to-do {
+        padding-bottom: 10px;
+        padding-top: 50px;
+    }
+    .affiliate .affiliate-how-to-do h2.title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .affiliate .affiliate-how-to-do .single-affiliate .part-text p {
+        font-size: 16px;
+    }
+    .affiliate {
+        padding: 60px 0;
+    }
+    .affiliate .part-para h2.title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .refferal-commision {
+        padding: 60px 0 30px;
+    }
+    .refferal-commision .single-commision {
+        margin-bottom: 30px;
+    }
+    .refferal-commision .single-commision .part-icon {
+        height: 60px;
+    }
+    .refferal-commision .single-commision .part-text span.title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .part-affilate-feature {
+        margin-top: 10px;
+    }
+}

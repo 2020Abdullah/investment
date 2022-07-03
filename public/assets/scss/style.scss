@@ -1,0 +1,62 @@
+/* =================================
+ Temlate Name : oitila
+ Author Name : autworks
+ Date: 17/01/2020
+ Version: 1.0
+ =================================
+
+/* =================================
+ css index
+ =================================
+ *. typography
+ *. section title
+ *. preloader
+ *. scroll to top button
+ *. normalize
+
+================================= */
+
+
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+
+
+//=Section scss
+@import "sections/_notification";
+@import "sections/_topbar";
+@import "sections/_header";
+@import "sections/_banner";
+@import "sections/_re";
+@import "sections/_statics";
+@import "sections/_pricing-plan";
+@import "sections/_cta";
+@import "sections/_team";
+@import "sections/_transaction";
+@import "sections/_choosing-reason";
+@import "sections/_testimonial";
+@import "sections/_payment-gateway";
+@import "sections/_how-to-works";
+@import "sections/_blog";
+@import "sections/_footer";
+@import "sections/_mobile-navigation";
+
+//=Pages scss
+@import "pages/_breadcrumb";
+@import "pages/_re";
+@import "pages/_blog";
+@import "pages/_faq";
+@import "pages/_contact";
+@import "pages/_register";
+@import "pages/_transaction";
+@import "pages/_login";
+@import "pages/_error";
+@import "pages/_affiliate";
+@import "pages/_refferal";
+@import "pages/_terms";
+@import "pages/_account";
+@import "pages/_player-profile";
+
+// inner pages responsive
+@import "main/_responsive";

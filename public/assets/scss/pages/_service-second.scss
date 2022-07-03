@@ -1,0 +1,40 @@
+/*==========================================
+    Service page
+==========================================*/
+.service-second {
+	padding: 120px 0 60px;
+	.single-service {
+		margin-bottom: 53px;
+		.part-img {
+			margin-bottom: 25px;
+			img {
+				width: 100%;
+			}
+		}
+		.part-text {
+			h3 {
+				font-size: 22px;
+				color: $heading-color;
+				font-weight: 700;
+				line-height: 30px;
+				margin-bottom: 20px;
+			}
+			p {
+				color: #666666;
+				line-height: 30px;
+			}
+			a {
+				text-transform: uppercase;
+				display: inline-block;
+				font-size: 12px;
+				font-weight: 700;
+				color: $base-color;
+				span {
+					&.icon {
+
+					}
+				}
+			}
+		}
+	}
+}

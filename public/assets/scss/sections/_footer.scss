@@ -1,0 +1,162 @@
+// footer
+.footer {
+    .footer-top {
+        background: #111;
+        padding: 120px 0 115px;
+    }
+    .re-widget {
+        a.logo {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 32px;
+            img {
+                width: 100%;
+            }
+        }
+        p {
+            color: #ababab;
+            line-height: 28px;
+        }
+        .social-links {
+            margin-top: 32px;
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        display: inline-block;
+                        background: #242424;
+                        color: $base-color;
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        margin-right: 6px;
+                        &.active, &:hover {
+                            background: $gradient-1;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .link-widget {
+        h4.title {
+            color: $white;
+            font-size: 24px;
+            line-height: 34px;
+            margin-top: -6px;
+            margin-bottom: 23px;
+            letter-spacing: 0;
+        }
+        ul {
+            li {
+                padding: 5px 0;
+                a {
+                    display: inline-block;
+                    color: #ababab;
+                    font-family: $heading-font;
+                    font-weight: 400;
+                    font-size: 18px;
+                    letter-spacing: 0;
+                    @include transition($transition);
+                    &:hover {
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+    .newsletter-widget {
+        h4.title {
+            color: $white;
+            font-size: 24px;
+            line-height: 34px;
+            margin-top: -6px;
+            margin-bottom: 15px;
+            letter-spacing: 0;
+            font-weight: 500;
+        }
+        .newsletter-form {
+            position: relative;
+            z-index: 2;
+            padding-bottom: 1px;
+            margin-bottom: 25px;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height:51px;
+                background: $base-color;
+                z-index: -1;
+                opacity: .5;
+            }
+            input {
+                background: #111;
+                border: none;
+                width: 100%;
+                padding: 0 90px 0 0;
+                height: 50px;
+                color: #999;
+            }
+            .def-btn {
+                display: inline-block;
+                background: $gradient-1;
+                border: none;
+                height: 40px;
+                color: #fff;
+                width: 140px;
+                border-radius: 50px;
+                margin-top: 20px;
+                font-family: $heading-font;
+                font-size: 18px;
+                text-transform: capitalize;
+                position: relative;
+                z-index: 2;
+                transition: all 0.3s ease-in;
+                overflow: hidden;
+                cursor: pointer;
+                outline: none;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $gradient-2;
+                    z-index: -1;
+                    @include transition($transition);
+                }
+                &:hover {
+                    &:after {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        p {
+            color: #ababab;
+            line-height: 28px;
+        }
+    }
+    .copyright-area {
+        background: #242424;
+        text-align: center;
+        padding: 25px 0;
+        p {
+            color: #999;
+            margin-bottom: 0;
+            line-height: 28px;
+            a {
+                background: $text-gradient-1;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                font-family: $body-font;
+                letter-spacing: 0;
+            }
+        }
+    }
+}

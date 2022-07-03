@@ -1,0 +1,105 @@
+// notification
+.notification-alert {
+    position: fixed;
+    z-index: 55;
+    width: 700px;
+    left: 50%;
+    height: 50px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    display: inline-block;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    @include transition($transition);
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .notice-list {
+        .single-notice {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 30px;
+            background: red;
+            margin-bottom: 10px;
+            // top: -30px;
+            // @include transition($transition);
+            opacity: 1;
+            &.hidden {
+                opacity: 0;
+                // top: 0;
+            }
+        }
+    }
+}
+
+#toast-container {
+    width: 1200px!important;
+    max-width: 1200px!important;
+    right: 50%!important;
+    transform: translateX(50%)!important;
+    top: 100px!important;
+    div {
+        box-shadow: none!important;
+        opacity: 1!important;
+        &:hover {
+            box-shadow: none!important;
+        }
+    }
+    .toast-success {
+        background-color: #3bb78f!important;
+        background-image: linear-gradient(-155deg, #0bab64 0%, #3bb78f 74%)!important;
+        position: relative!important;
+        &:after {
+            position: absolute;
+            content: '\f00c';
+            font-family:  "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .toast-error {
+        background-color: #eb4511!important;
+        background-image: linear-gradient(-155deg, #b02e0c 0%, #eb4511 74%)!important;
+        position: relative!important;
+        &:after {
+            position: absolute;
+            content: '\f00d';
+            font-family:  "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+body.homepage-3 {
+    #toast-container {
+        top: 150px!important;
+        width: 1220px!important;
+        max-width: 1220px!important;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    #toast-container {
+        width: 100%!important;
+        max-width: 100%!important;
+        top: 10px!important;
+    }
+    body.homepage-3 {
+        #toast-container {
+            width: 100%!important;
+            max-width: 100%!important;
+            top: 10px!important;
+        }
+    }
+}
+

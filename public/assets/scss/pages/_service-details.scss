@@ -1,0 +1,133 @@
+ /*==========================================
+    Service Details
+==========================================*/
+.service-details {
+	padding: 120px 0 105px;
+	.left-side {
+		.part-img {
+			img {
+				width: 100%;
+			}
+		}
+		.part-text-top {
+			h3 {
+				color: $heading-color;
+				font-size: 36px;
+				font-weight: 700;
+				margin-bottom: 21px;
+				margin-top: 34px;
+			}
+			p {
+				color: #666666;
+				line-height: 30px;
+				&:last-child {
+
+				}
+			}
+		}
+		.part-text-bottom {
+			margin-top: 29px;
+			h4 {
+				color: $heading-color;
+				font-size: 24px;
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+			p {
+				color: #666666;
+				line-height: 30px;
+				margin-bottom: 29px;
+			}
+			ul {
+				padding-left: 30px;
+				li {
+					font-size: 16px;
+					color: #283659;
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+	.right-side {
+		.consultant-form {
+			background: #030d26;
+			padding: 50px 40px 50px;
+			h3 {
+				font-size: 24px;
+				color: $white;
+				font-weight: 700;
+				margin-top: -6px;
+				margin-bottom: 28px;
+			}
+			form {
+				input {
+					padding: 20px 0;
+					border: none;
+					width: 100%;
+					background: transparent;
+					border-bottom: 1px solid #596c7d;
+					color: $white;
+					font-size: 14px;
+					&::placeholder {
+						color: $white;
+						opacity: .7;
+					}
+				}
+				button {
+					height: 50px;
+					width: 150px;
+					background: $base-color;
+					color: $white;
+					font-size: 14px;
+					@include transition($transition);
+					border: 1px solid $base-color;
+					cursor: pointer;
+					margin-top: 40px;
+					&:hover {
+						background: transparent;
+						color: $base-color;
+					}
+				}
+			}
+		}
+		.download-button {
+			margin-top: 60px;
+			button {
+				color: #51596e;
+				font-size: 16px;
+				font-weight: 600;
+				background: #edf0f2;
+				height: 70px;
+				width: 100%;
+				border: none;
+				margin-bottom: 10px;
+				position: relative;
+				padding-left: 70px;
+				outline: none;
+				cursor: pointer;
+				@include transition($transition);
+				&:hover {
+					background: $base-color;
+					color: $white;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				span {
+					display: inline-block;
+				    position: absolute;
+					background: #edf0f2;
+				    left: 0;
+				    top: 0;
+				    width: 70px;
+				    height: 100%;
+				    padding-top: 20px;
+				    border-right: 1px solid #cfd6da;
+					img {
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+}
